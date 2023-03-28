@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap');
+:root {
+  --backgroundColor: #000000;
+  --calcBg: #14213d;
+  --popColor: #fca311;
+  --numberColor: #e5e5e5;
+  --displayColor: #ffffff;
+  --btnColor: #6c757d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+
+}
+
+/* Body */ 
+
+body {
+  background-color: var(--backgroundColor);
+  height: 100vh;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+/* Container */
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Calculator Main */
+
+.calculator {
+  background-color: var(--calcBg);
+  height: 800px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+/* Display */
+
+.display {
+  background-color: var(--displayColor);
+  margin: 75px;
+  width: 450px;
+  height: 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.display-text {
+  font-size: 35px;
+}
+
+/* Buttons */
+
+.buttons {
+  display: grid;
+  width: 450px;
+  height: 450px;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--calcBg);
+}
+
+
+
+.buttons > * {
+  margin: 5px;
+  background-color: var(--btnColor);
+  color: var(--numberColor);
+  font-size: 2rem;
+}
+.equals {
+  background-color: var(--popColor);
+}
+
+button.equals:active {
+  background-color: var(--btnColor);
+}
+
+.buttons > *:active {
+  background-color: var(--popColor);
+}
+
+
+

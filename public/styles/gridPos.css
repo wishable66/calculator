@@ -1,0 +1,40 @@
+.zero {
+  grid-column: -5 / -3
+}
+
+.equals {
+  grid-column-end: -1;
+  grid-row: 4 / 6;
+}
+
+.one {
+  grid-row: 4/5;
+}
+
+.two {
+  grid-column: 2/3 
+}
+
+.plus {
+  grid-column: 4 / 5;
+  grid-row: 3/4;
+}
+
+.four {
+  grid-row: 3/4;
+}
+
+.five {
+  grid-column: 2/3;
+  grid-row: 3/4
+}
+
+.six {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.subtract {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
