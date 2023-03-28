@@ -1,53 +1,9 @@
-const add = (a, b) => {
-    return a + b;
-};
-const subtract = (a, b) => {
-    return a - b;
-};
-const multiply = (array) => {
-    return array.length
-        ? array.reduce((accumulator, nextItem) => accumulator * nextItem)
-        : 0;
-};
-const divide = (array) => {
-    return array.length
-        ? array.reduce((accumulator, nextItem) => accumulator / nextItem)
-        : 0;
-};
-function operate(firstNumber, secondNumber, operator) {
-    if (isNaN(firstNumber) || isNaN(secondNumber))
-        return;
-    if (operator === '+')
-        return add(firstNumber, secondNumber);
-    if (operator === '-')
-        return subtract(firstNumber, secondNumber);
-    if (operator === '*')
-        return multiply([firstNumber, secondNumber]);
-    if (operator === '/')
-        return divide([firstNumber, secondNumber]);
-}
-const display = document.querySelector('.display-text');
-function updateDisplay(text, set) {
-    return set ? (display.textContent = text) : (display.textContent += text);
-}
-function resetValues() {
-    return ((firstNumber = ''),
-        (secondNumber = ''),
-        (operator = ''),
-        (result = 0),
-        (display.textContent = ''));
-}
-function checkForZero(firstNumber, secondNumber, operator) {
-    if (operator === '/' && secondNumber === 0)
-        return 'ERROR';
-    else
-        return 'good';
-}
 let firstNumber = '';
 let secondNumber = '';
 let operator = '';
 let result = 0;
 const operators = ['+', '-', '/', '*'];
+const display = document.querySelector('.display-text');
 const btns = document.querySelectorAll('.buttons > *');
 btns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -134,3 +90,47 @@ btns.forEach((btn) => {
         }
     });
 });
+function resetValues() {
+    return ((firstNumber = ''),
+        (secondNumber = ''),
+        (operator = ''),
+        (result = 0),
+        (display.textContent = ''));
+}
+function checkForZero(firstNumber, secondNumber, operator) {
+    if (operator === '/' && secondNumber === 0)
+        return 'ERROR';
+    else
+        return 'good';
+}
+function updateDisplay(text, set) {
+    return set ? (display.textContent = text) : (display.textContent += text);
+}
+const add = (a, b) => {
+    return a + b;
+};
+const subtract = (a, b) => {
+    return a - b;
+};
+const multiply = (array) => {
+    return array.length
+        ? array.reduce((accumulator, nextItem) => accumulator * nextItem)
+        : 0;
+};
+const divide = (array) => {
+    return array.length
+        ? array.reduce((accumulator, nextItem) => accumulator / nextItem)
+        : 0;
+};
+function operate(firstNumber, secondNumber, operator) {
+    if (isNaN(firstNumber) || isNaN(secondNumber))
+        return;
+    if (operator === '+')
+        return add(firstNumber, secondNumber);
+    if (operator === '-')
+        return subtract(firstNumber, secondNumber);
+    if (operator === '*')
+        return multiply([firstNumber, secondNumber]);
+    if (operator === '/')
+        return divide([firstNumber, secondNumber]);
+}
