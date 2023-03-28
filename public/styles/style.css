@@ -64,6 +64,7 @@ body {
 
 .display-text {
   font-size: 35px;
+  overflow: hidden;
 }
 
 /* Buttons */

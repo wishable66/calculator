@@ -7,33 +7,33 @@
   <title>Calculator</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/gridPos.css">
-  <script src="index.js"></script>
+  <script src="index.js" defer></script>
 </head>
 <body>
   <div class="container">
     <div class="calculator">
       <div class="display">
-        <p class="display-text">1+1-3+2&times;3</p>
+        <p class="display-text"></p>
       </div>
       <div class="buttons">
-        <button class="reset">AC</button>
-        <button class="backspace">C</button>
-        <button class="/">&divide;</button>
-        <button class="*">&times;</button>
-        <button class="seven">7</button>
-        <button class="eight">8</button>
-        <button class="9">9</button>
-        <button class="subtract">-</button>
-        <button class="four">4</button>
-        <button class="five">5</button>
-        <button class="six">6</button>
-        <button class="plus">+</button>
-        <button class="one">1</button>
-        <button class="two">2</button>
-        <button class="three">3</button>
-        <button class="equals">=</button>
-        <button class="zero">0</button>
-        <button class="decimal">.</button>
+        <button class="reset" data-key="reset">AC</button>
+        <button class="backspace" data-key="backspace">C</button>
+        <button class="/" data-key="/">&divide;</button>
+        <button class="*" data-key="*">&times;</button>
+        <button class="seven" data-key="7">7</button>
+        <button class="eight" data-key="8">8</button>
+        <button class="9" data-key="9">9</button>
+        <button class="subtract" data-key="-">-</button>
+        <button class="four" data-key="4">4</button>
+        <button class="five" data-key="5">5</button>
+        <button class="six" data-key="6">6</button>
+        <button class="plus" data-key="+">+</button>
+        <button class="one" data-key="1">1</button>
+        <button class="two" data-key="2">2</button>
+        <button class="three" data-key="3">3</button>
+        <button class="equals" data-key="=">=</button>
+        <button class="zero" data-key="0">0</button>
+        <button class="decimal" data-key=".">.</button>
       </div>
     </div>
   </div>
